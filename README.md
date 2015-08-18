@@ -9,7 +9,7 @@ Simply add class and resource files to your project, or use CocoaPods.
 ```ruby
 platform :ios, "9.0"
 target :'Your WatchKit Extension Name', :exclusive => true do
-    pod 'EMTLoadingIndicator', '~> 1.0.0'
+    pod 'EMTLoadingIndicator', '~> 1.0.1'
 end
 ```
 
