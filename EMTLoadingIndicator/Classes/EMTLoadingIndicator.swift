@@ -54,12 +54,13 @@ import CoreGraphics
     }
     
     private func prepareImagesForWaitStyleDot() {
-        if EMTLoadingIndicator.waitImage == nil {
-            let bundlePath = NSBundle.mainBundle().pathForResource("waitIndicatorGraphic", ofType: "bundle")
-            let bundle = NSBundle(path: bundlePath!)
+        if EMTLoadingIndicator.reloadImage == nil {
+            let bundle = NSBundle(forClass: EMTLoadingIndicator.self)
+            let bundlePath = bundle.pathForResource("waitIndicatorGraphic", ofType: "bundle")
+            let imageBundle = NSBundle(path: bundlePath!)
             let cursors: [UIImage] = (0...29).map {
                 let index = $0
-                return UIImage(contentsOfFile: (bundle?.pathForResource("waitIndicatorGraphic-\(index)@2x", ofType: "png"))!)!
+                return UIImage(contentsOfFile: (imageBundle?.pathForResource("waitIndicatorGraphic-\(index)@2x", ofType: "png"))!)!
             }
             EMTLoadingIndicator.waitImage = UIImage.animatedImageWithImages(cursors, duration: 1)
         }
