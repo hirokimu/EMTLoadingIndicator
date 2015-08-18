@@ -32,7 +32,7 @@ style decides the visual of wait (loop) indicator - Dot or Circular.
 
 ### Dot (Default-look) Indicator
 
-![Image](http://www.emotionale.jp/images/git/loading_indicator/img0.jpg)
+![Image](http://www.emotionale.jp/images/git/loadingindicator/img0.jpg)
 
 ```swift
 indicator = EMTLoadingIndicator(interfaceController:self, interfaceImage:self.image, 
@@ -54,7 +54,7 @@ indicator?.hide()
 
 ### Circular Indicator
 
-![Image](http://www.emotionale.jp/images/git/loading_indicator/img1.jpg)
+![Image](http://www.emotionale.jp/images/git/loadingindicator/img1.jpg)
 
 ```swift
 indicator = EMTLoadingIndicator(interfaceController:self, interfaceImage:self.image, 
@@ -66,7 +66,7 @@ indicator?.hide()
 
 ### Progress Indicator
 
-![Image](http://www.emotionale.jp/images/git/loading_indicator/img2.jpg)
+![Image](http://www.emotionale.jp/images/git/loadingindicator/img2.jpg)
 
 ```swift
 indicator?.prepareImagesForProgress()
@@ -82,7 +82,7 @@ indicator?.hide()
 
 ### Reload Icon
 
-![Image](http://www.emotionale.jp/images/git/loading_indicator/img3.jpg)
+![Image](http://www.emotionale.jp/images/git/loadingindicator/img3.jpg)
 
 You can display static reload icon (for some loading error situation).
 
