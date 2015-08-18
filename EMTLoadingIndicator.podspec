@@ -8,10 +8,10 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/hirokimu/EMTLoadingIndicator"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Hironobu Kimura" => "kimura@emotionale.jp" }
-  s.platform     = :ios, "9.0"
-  s.watchos.deployment_target = '2.0'
+  s.watchos.deployment_target = "2.0"
   s.source       = { :git => "https://github.com/hirokimu/EMTLoadingIndicator.git", :tag => s.version }
-  s.source_files  = "EMTLoadingIndicator/Classes/*.swift"
-  s.resource = "EMTLoadingIndicator/Resources/waitIndicatorGraphic.bundle"
+  s.watchos.source_files = "EMTLoadingIndicator/Classes/*.swift"
+  s.watchos.resource = "EMTLoadingIndicator/Resources/waitIndicatorGraphic.bundle"
+  s.frameworks = "WatchKit", "UIKit", "CoreGraphics"
   s.requires_arc = true
 end
