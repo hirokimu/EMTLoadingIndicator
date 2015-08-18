@@ -3,7 +3,8 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "Displays loading indicator on Apple watchOS 2"
   s.description  = <<-DESC
-                   It has default-look waiting indicator, circular indicator, and progress indicator. Makes animated images for WKInterfaceImage dynamically. 
+                   It has default-look waiting indicator, circular indicator, and progress indicator. Makes animated images for WKInterfaceImage dynamically.
+                   DESC
   s.homepage     = "https://github.com/hirokimu/EMTLoadingIndicator"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Hironobu Kimura" => "kimura@emotionale.jp" }
