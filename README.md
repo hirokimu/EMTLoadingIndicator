@@ -23,7 +23,8 @@ private var indicator: EMTLoadingIndicator?
 
 override func willActivate() {
 
-    indicator = EMTLoadingIndicator(interfaceController:self, interfaceImage:self.image, width:40, height:40, style: EMTLoadingIndicatorWaitStyle.Line)
+    indicator = EMTLoadingIndicator(interfaceController:self, interfaceImage:self.image, 
+        width:40, height:40, style: EMTLoadingIndicatorWaitStyle.Line)
 ```
 
 width and height are the size of WKInterfaceImage passed to 2nd argument. Indicator images will be created with this size.
@@ -34,15 +35,17 @@ style decides the visual of wait (loop) indicator - Dot or Circular.
 ![Image](http://www.emotionale.jp/images/git/loading_indicator/img0.jpg)
 
 ```swift
-indicator = EMTLoadingIndicator(interfaceController:self, interfaceImage:self.image, width:40, height:40, style:EMTLoadingIndicatorWaitStyle.Dot);
+indicator = EMTLoadingIndicator(interfaceController:self, interfaceImage:self.image, 
+    width:40, height:40, style:EMTLoadingIndicatorWaitStyle.Dot);
 
-//prepareImageForWait will be called via showWait automatically at the first time. You can also call it in your timing if necessary.
+// prepareImageForWait will be called via showWait automatically at the first time.
+// You can also call it in your timing if necessary.
 indicator?.prepareImagesForWait()
 
-//show
+// show
 indicator?.showWait()
 
-//hide
+// hide
 indicator?.hide()
 ```
 *Images of Dot indicator are static resource files size of 80px x 80px. These are stored in waitIndicatorGraphic.bundle.
@@ -54,7 +57,8 @@ indicator?.hide()
 ![Image](http://www.emotionale.jp/images/git/loading_indicator/img1.jpg)
 
 ```swift
-indicator = EMTLoadingIndicator(interfaceController:self, interfaceImage:self.image, width:40, height:40, style:EMTLoadingIndicatorWaitStyle.Line);
+indicator = EMTLoadingIndicator(interfaceController:self, interfaceImage:self.image, 
+    width:40, height:40, style:EMTLoadingIndicatorWaitStyle.Line);
 indicator?.prepareImagesForWait()
 indicator?.showWait()
 indicator?.hide()
@@ -67,10 +71,10 @@ indicator?.hide()
 ```swift
 indicator?.prepareImagesForProgress()
 
-//You can set start percentage other than 0.
+// You can set start percentage other than 0.
 indicator?.showProgress(startPercentage:0)
 
-//Update progress percentage with animation
+// Update progress percentage with animation
 indicator?.updateProgress(percentage:75)
 
 indicator?.hide()
@@ -92,10 +96,10 @@ You can change color and line width of Circular/Progress indicator.
 You need to set properties before using prepare/show methods.
 
 ```swift
-EMTLoadingIndicator.circleLineColor = UIColor.blueColor() //default: white
-EMTLoadingIndicator.circleLineWidth = 2 //default: 1
-EMTLoadingIndicator.progressLineColor = UIColor.redColor() //default: white
-EMTLoadingIndicator.progressLineWidth = 8 //default: 4
+EMTLoadingIndicator.circleLineColor = UIColor.blueColor() // default: white
+EMTLoadingIndicator.circleLineWidth = 2 // default: 1
+EMTLoadingIndicator.progressLineColor = UIColor.redColor() // default: white
+EMTLoadingIndicator.progressLineWidth = 8 // default: 4
 ```
 
 ### Clear Images
