@@ -118,3 +118,6 @@ indicator?.clearProgressImage()
 
 ## License
 EMTLoadingIndicator is available under the MIT license. See the LICENSE file for more info.
+
+## Notice
+All images in this readme are fakes created with Photoshop. Not screenshots.
