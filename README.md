@@ -114,7 +114,7 @@ indicator?.clearProgressImage()
 ```
 
 ## Requirements
-- iOS 9.0+
+- watchOS 2.0+
 
 ## License
 EMTLoadingIndicator is available under the MIT license. See the LICENSE file for more info.
