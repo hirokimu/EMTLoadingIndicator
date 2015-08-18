@@ -10,7 +10,7 @@ Simply add class and resource files to your project, or use CocoaPods.
 use_frameworks!
 target :'testtest WatchKit Extension', :exclusive => true do
 	platform :watchos, '2.0'
-    pod 'EMTLoadingIndicator', '~> 1.0.3'
+    pod 'EMTLoadingIndicator', '~> 1.0.4'
 end
 ```
 
@@ -49,9 +49,8 @@ indicator?.showWait()
 // hide
 indicator?.hide()
 ```
-*Images of Dot indicator are static resource files size of 80px x 80px. These are stored in waitIndicatorGraphic.bundle.
- PNG files in that bundle are created with Flash CC (waitIndicatorGraphic.fla).
-
+*Images of Dot indicator are static resource files size of 80px x 80px.
+ These PNG files are created with Flash CC (waitIndicatorGraphic.fla).
 
 ### Circular Indicator
 
