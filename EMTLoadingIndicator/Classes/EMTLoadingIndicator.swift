@@ -1,74 +1,80 @@
 //
 //  EMTLoadingIndicator.swift
 //
-//  Created by Hironobu Kimura on 2015/08/14.
-//  Copyright (C) 2015 emotionale. All rights reserved.
+//  Created by Hironobu Kimura on 2016/08/04.
+//  Copyright (C) 2016 emotionale. All rights reserved.
 //
 
 import UIKit
 import WatchKit
-import CoreGraphics
 
-@objc final public class EMTLoadingIndicator: NSObject {
+@objc
+final public class EMTLoadingIndicator: NSObject {
 
     private weak var controller: WKInterfaceController?
     private weak var image: WKInterfaceImage?
     private var imageSize: CGSize
     
-    public static var waitImage: UIImage?
-    public static var progressImages = [UIImage]()
-    public static var reloadImage: UIImage?
+    private static var dotWaitImage: UIImage?
+    private static var lineWaitImage: UIImage?
+    private static var progressImages = [UIImage]()
+    private static var reloadImage: UIImage?
 
-    public static var circleLineColor = UIColor.whiteColor()
-    public static var progressLineColor = UIColor.whiteColor()
     public static var circleLineWidth: CGFloat = 1
-    public static var progressLineWidth: CGFloat = 3
+    public static var circleLineColor = UIColor(white: 1, alpha: 0.8)
+
+    public static var progressLineWidthOuter: CGFloat = 1
+    public static var progressLineWidthInner: CGFloat = 2
+    public static var progressLineColorOuter = UIColor(white: 1, alpha: 0.28)
+    public static var progressLineColorInner = UIColor(white: 1, alpha: 0.70)
     
-    private var currentProgressFrame: Int
+    public static var reloadLineWidth: CGFloat = 4
+    public static var reloadArrowRatio: CGFloat = 3
+    public static var reloadColor = UIColor.whiteColor()
+    
+    private var currentProgressFrame = 0
     private var timer: EMTTimer?
-    private var frames: Array<Int>
-    private var isFirstProgressUpdate: Bool
+    private var frames = [Int]()
+    private var isFirstProgressUpdate = false
     private var style: EMTLoadingIndicatorWaitStyle
     
     public init(interfaceController: WKInterfaceController?, interfaceImage: WKInterfaceImage?,
         width: CGFloat, height: CGFloat, style: EMTLoadingIndicatorWaitStyle) {
             
-        self.controller = interfaceController
-        self.image = interfaceImage
-        self.imageSize = CGSize(width: width, height: height)
+        controller = interfaceController
+        image = interfaceImage
+        imageSize = CGSize(width: width, height: height)
         self.style = style
-        currentProgressFrame = 0
-        frames = [Int]()
         image?.setAlpha(0)
-        isFirstProgressUpdate = false
         
         super.init()
     }
     
     public func prepareImagesForWait() {
-        if (style == .Dot) {
+        if style == .Dot {
             prepareImagesForWaitStyleDot()
-        } else if (style == .Line){
+        }
+        else if style == .Line {
             prepareImagesForWaitStyleLine()
         }
     }
     
     private func prepareImagesForWaitStyleDot() {
-        if EMTLoadingIndicator.reloadImage == nil {
+        if EMTLoadingIndicator.dotWaitImage == nil {
             let bundle = NSBundle(forClass: EMTLoadingIndicator.self)
             let cursors: [UIImage] = (0...29).map {
                 let index = $0
                 return UIImage(contentsOfFile: (bundle.pathForResource("waitIndicatorGraphic-\(index)@2x", ofType: "png"))!)!
             }
-            EMTLoadingIndicator.waitImage = UIImage.animatedImageWithImages(cursors, duration: 1)
+            EMTLoadingIndicator.dotWaitImage = UIImage.animatedImageWithImages(cursors, duration: 1)
         }
     }
     
     private func prepareImagesForWaitStyleLine() {
-        if EMTLoadingIndicator.waitImage == nil {
-        
+        if EMTLoadingIndicator.lineWaitImage == nil {
+            
             UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
-            let context:CGContextRef = UIGraphicsGetCurrentContext()!
+            let context = UIGraphicsGetCurrentContext()!
             
             let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: imageSize)
             let center = CGPoint(x: imageSize.width / 2, y: imageSize.height / 2)
@@ -91,15 +97,14 @@ import CoreGraphics
                 EMTLoadingIndicator.circleLineColor.setStroke()
                 path.stroke()
                 
-                let currentFrameImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()
+                let currentFrameImage = UIGraphicsGetImageFromCurrentImageContext()
                 CGContextClearRect(context, rect)
                 
                 return currentFrameImage
             }
-            
             UIGraphicsEndImageContext()
             
-            EMTLoadingIndicator.waitImage = UIImage.animatedImageWithImages(images, duration: 1)
+            EMTLoadingIndicator.lineWaitImage = UIImage.animatedImageWithImages(images, duration: 1)
         }
     }
     
@@ -111,23 +116,23 @@ import CoreGraphics
 
             let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: imageSize)
             let center = CGPoint(x: imageSize.width / 2, y: imageSize.height / 2)
-            let radius = imageSize.width / 2 - EMTLoadingIndicator.circleLineWidth / 2
-            let progressRadius = radius - EMTLoadingIndicator.progressLineWidth / 2
+            let radius = imageSize.width / 2 - EMTLoadingIndicator.progressLineWidthOuter / 2
+            let progressRadius = radius - EMTLoadingIndicator.progressLineWidthInner / 2
             
             let images: [UIImage] = (0...60).map {
 
-                let path:UIBezierPath = UIBezierPath(arcCenter: center,
+                let path = UIBezierPath(arcCenter: center,
                     radius: radius,
                     startAngle: 0,
                     endAngle: CGFloat(M_PI * 2),
                     clockwise: true)
                 
-                path.lineWidth = EMTLoadingIndicator.circleLineWidth
+                path.lineWidth = EMTLoadingIndicator.progressLineWidthOuter
                 path.lineCapStyle = CGLineCap.Round
-                EMTLoadingIndicator.circleLineColor.setStroke()
+                EMTLoadingIndicator.progressLineColorOuter.setStroke()
                 path.stroke()
 
-                let degree: CGFloat = 6 * CGFloat($0)
+                let degree = 6 * CGFloat($0)
                 let startDegree = CGFloat(-M_PI / 2)
                 let endDegree = startDegree + CGFloat(M_PI / 180) * degree
                 
@@ -136,17 +141,16 @@ import CoreGraphics
                     startAngle: startDegree,
                     endAngle: endDegree,
                     clockwise: true)
-                progressPath.lineWidth = EMTLoadingIndicator.progressLineWidth
+                progressPath.lineWidth = EMTLoadingIndicator.progressLineWidthInner
                 progressPath.lineCapStyle = CGLineCap.Butt
-                EMTLoadingIndicator.progressLineColor.setStroke()
+                EMTLoadingIndicator.progressLineColorInner.setStroke()
                 progressPath.stroke()
                 
-                let currentFrameImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()
+                let currentFrameImage = UIGraphicsGetImageFromCurrentImageContext()
                 CGContextClearRect(context, rect)
                 
                 return currentFrameImage
             }
-            
             UIGraphicsEndImageContext()
             
             EMTLoadingIndicator.progressImages = images
@@ -159,7 +163,7 @@ import CoreGraphics
             UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
             let context:CGContextRef = UIGraphicsGetCurrentContext()!
 
-            let triangleSideLength = EMTLoadingIndicator.circleLineWidth * 6
+            let triangleSideLength = EMTLoadingIndicator.reloadLineWidth * EMTLoadingIndicator.reloadArrowRatio
             let center = CGPointMake(imageSize.width / 2, imageSize.height / 2)
             let radius = imageSize.width / 2 - triangleSideLength / 2
             let startDegree: CGFloat = 0
@@ -170,13 +174,13 @@ import CoreGraphics
                 startAngle: startDegree,
                 endAngle: endDegree,
                 clockwise: true)
-            path.lineWidth = EMTLoadingIndicator.circleLineWidth
+            path.lineWidth = EMTLoadingIndicator.reloadLineWidth
             path.lineCapStyle = CGLineCap.Square
             path.lineJoinStyle = CGLineJoin.Miter
-            EMTLoadingIndicator.circleLineColor.setStroke()
+            EMTLoadingIndicator.reloadColor.setStroke()
             path.stroke()
             
-            CGContextSetFillColorWithColor(context, EMTLoadingIndicator.circleLineColor.CGColor)
+            CGContextSetFillColorWithColor(context, EMTLoadingIndicator.reloadColor.CGColor)
             CGContextMoveToPoint(context, center.x, 0)
             CGContextAddLineToPoint(context, center.x + triangleSideLength * 0.866, triangleSideLength / 2)
             CGContextAddLineToPoint(context, center.x, triangleSideLength)
@@ -191,14 +195,16 @@ import CoreGraphics
 
     public func showWait() {
         prepareImagesForWait()
-        image?.setImage(EMTLoadingIndicator.waitImage)
+
+        image?.setImage(style == .Dot ? EMTLoadingIndicator.dotWaitImage : EMTLoadingIndicator.lineWaitImage)
         image?.startAnimating()
         
         if let controller = controller, image = image {
             controller.animateWithDuration(0.3, animations: {
                 image.setAlpha(1)
             })
-        } else {
+        }
+        else {
             image?.setAlpha(1)
         }
     }
@@ -212,7 +218,8 @@ import CoreGraphics
             controller.animateWithDuration(0.3, animations: {
                 image.setAlpha(1)
             })
-        } else {
+        }
+        else {
             image?.setAlpha(1)
         }
     }
@@ -230,7 +237,8 @@ import CoreGraphics
             controller.animateWithDuration(0.3, animations: {
                 image.setAlpha(1)
             })
-        } else {
+        }
+        else {
             image?.setAlpha(1)
         }
     }
@@ -252,10 +260,8 @@ import CoreGraphics
         clearTimer()
         timer = EMTTimer(
                     interval: 0.033,
-                    callback: { [weak self] (timer: NSTimer) in
-                        if let weakSelf = self {
-                            weakSelf.nextFrame(timer)
-                        }
+                    callback: { [weak self] timer in
+                        self?.nextFrame(timer)
                     },
                     userInfo: nil,
                     repeats: true)
@@ -297,22 +303,29 @@ import CoreGraphics
             controller.animateWithDuration(0.3, animations: {
                 image.setAlpha(0)
             })
-        } else {
+        }
+        else {
             image?.setAlpha(0)
         }
     }
     
     private func getCurrentFrameIndex(forPercentage: Float) -> Int {
-        if (forPercentage < 0) {
+        if forPercentage < 0 {
            return 0
-        } else if (forPercentage > 100) {
+        }
+        else if forPercentage > 100 {
            return 60
         }
         return Int(60.0 * forPercentage / 100.0)
     }
 
-    public func clearWaitImage() {
-        EMTLoadingIndicator.waitImage = nil
+    public func clearWaitImage(type: EMTLoadingIndicatorWaitStyle) {
+        if style == .Dot {
+            EMTLoadingIndicator.dotWaitImage = nil
+        }
+        else if style == .Line {
+            EMTLoadingIndicator.lineWaitImage = nil
+        }
     }
     
     public func clearReloadImage() {
@@ -329,7 +342,8 @@ import CoreGraphics
     }
 }
 
-@objc public enum EMTLoadingIndicatorWaitStyle: Int {
+@objc
+public enum EMTLoadingIndicatorWaitStyle: Int {
     case Dot
     case Line
 }

@@ -1,26 +1,26 @@
 //
 //  EMTTimer.swift
 //
-//  Created by Hironobu Kimura on 2015/08/17.
-//  Copyright (C) 2015 emotionale. All rights reserved.
+//  Created by Hironobu Kimura on 2016/08/04.
+//  Copyright (C) 2016 emotionale. All rights reserved.
 //
 
 import WatchKit
 
-public final class EMTTimer: NSObject {
+typealias EMTTimerCallback = (NSTimer) -> Void
 
-    private var timer: EMTTimerInternal?
-    private var callback: (NSTimer) -> Void
+public final class EMTTimer: NSObject {
     
-    init(interval: NSTimeInterval, callback: (NSTimer) -> Void, userInfo: AnyObject?, repeats: Bool) {
+    private var timer: EMTTimerInternal?
+    private var callback: EMTTimerCallback
+    
+    init(interval: NSTimeInterval, callback: EMTTimerCallback, userInfo: AnyObject?, repeats: Bool) {
         self.callback = callback
         super.init()
         timer = EMTTimerInternal(
                     interval: interval,
-                    callback: { [weak self] (timer: NSTimer) in
-                        if let weakSelf = self {
-                            weakSelf.callback(timer)
-                        }
+                    callback: { [weak self] timer in
+                        self?.callback(timer)
                     },
                     userInfo: userInfo,
                     repeats: repeats)
@@ -40,7 +40,7 @@ internal class EMTTimerInternal: NSObject {
     private var timer: NSTimer?
     private var callback: (NSTimer) -> Void
     
-    init(interval: NSTimeInterval, callback: (NSTimer) -> Void, userInfo: AnyObject?, repeats: Bool) {
+    init(interval: NSTimeInterval, callback: EMTTimerCallback, userInfo: AnyObject?, repeats: Bool) {
 
         self.callback = callback
         
@@ -49,7 +49,7 @@ internal class EMTTimerInternal: NSObject {
         self.timer = NSTimer.scheduledTimerWithTimeInterval(
                         interval,
                         target: self,
-                        selector: (repeats) ? "repeatTimerFired:" : "timerFired:",
+                        selector: repeats ? #selector(repeatTimerFired(_:)) : #selector(timerFired(_:)),
                         userInfo: userInfo,
                         repeats: repeats)
     }

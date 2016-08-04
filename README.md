@@ -1,5 +1,5 @@
 #EMTLoadingIndicator
-Displays loading indicator on Apple watchOS 2
+Displays loading indicator on Apple watchOS 2+
 
 ## Installation
 Simply add class and resource files to your project, or use CocoaPods.
@@ -8,9 +8,9 @@ Simply add class and resource files to your project, or use CocoaPods.
 
 ```ruby
 use_frameworks!
-target :'testtest WatchKit Extension', :exclusive => true do
+target :'SomeWatchKitApp Extension', :exclusive => true do
 	platform :watchos, '2.0'
-    pod 'EMTLoadingIndicator', '~> 1.0.5'
+    pod 'EMTLoadingIndicator', '~> 1.0.6'
 end
 ```
 
@@ -24,23 +24,24 @@ private var indicator: EMTLoadingIndicator?
 
 override func willActivate() {
 
-    indicator = EMTLoadingIndicator(interfaceController:self, interfaceImage:self.image, 
-        width:40, height:40, style: EMTLoadingIndicatorWaitStyle.Line)
+    indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!, 
+        width: 40, height: 40, style: .Line)
 ```
 
 width and height are the size of WKInterfaceImage passed to 2nd argument. Indicator images will be created with this size.
-style decides the visual of wait (loop) indicator - Dot or Circular.
+Style argument decides the visual of wait (loop) indicator - Dot or Line.
 
-### Dot (Default-look) Indicator
+
+### Dot (System-like) Indicator
 
 ![Image](http://www.emotionale.jp/images/git/loadingindicator/img0.jpg)
 
 ```swift
-indicator = EMTLoadingIndicator(interfaceController:self, interfaceImage:self.image, 
-    width:40, height:40, style:EMTLoadingIndicatorWaitStyle.Dot);
+indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!, 
+    width: 40, height: 40, style: .Dot);
 
-// prepareImageForWait will be called via showWait automatically at the first time.
-// You can also call it in your timing if necessary.
+// prepareImageForWait will be called automatically in the showWait method at the first time.
+// It takes a bit of time. You can call it manually if necessary.
 indicator?.prepareImagesForWait()
 
 // show
@@ -52,14 +53,14 @@ indicator?.hide()
 *Images of Dot indicator are static resource files size of 80px x 80px.
  These PNG files are created with Flash CC (waitIndicatorGraphic.fla).
 
-### Circular Indicator
+
+### Line (Circular) Indicator
 
 ![Image](http://www.emotionale.jp/images/git/loadingindicator/img1.jpg)
 
 ```swift
-indicator = EMTLoadingIndicator(interfaceController:self, interfaceImage:self.image, 
-    width:40, height:40, style:EMTLoadingIndicatorWaitStyle.Line);
-indicator?.prepareImagesForWait()
+indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!, 
+    width: 40, height: 40, style: .Line);
 indicator?.showWait()
 indicator?.hide()
 ```
@@ -72,10 +73,10 @@ indicator?.hide()
 indicator?.prepareImagesForProgress()
 
 // You can set start percentage other than 0.
-indicator?.showProgress(startPercentage:0)
+indicator?.showProgress(startPercentage: 0)
 
 // Update progress percentage with animation
-indicator?.updateProgress(percentage:75)
+indicator?.updateProgress(percentage: 75)
 
 indicator?.hide()
 ```
@@ -84,7 +85,7 @@ indicator?.hide()
 
 ![Image](http://www.emotionale.jp/images/git/loadingindicator/img3.jpg)
 
-You can display static reload icon (for some loading error situation).
+You can display static reload icon (in some loading error situations).
 
 ```swift
 indicator?.showReload()
@@ -92,14 +93,19 @@ indicator?.showReload()
 
 ### Styling
 
-You can change color and line width of Circular/Progress indicator.
-You need to set properties before using prepare/show methods.
+If you want to change styles, you need to set properties before using prepare/show methods.
 
 ```swift
-EMTLoadingIndicator.circleLineColor = UIColor.blueColor() // default: white
-EMTLoadingIndicator.circleLineWidth = 2 // default: 1
-EMTLoadingIndicator.progressLineColor = UIColor.redColor() // default: white
-EMTLoadingIndicator.progressLineWidth = 8 // default: 4
+// defaults
+EMTLoadingIndicator.circleLineColor = UIColor(white: 1, alpha: 0.8)
+EMTLoadingIndicator.circleLineWidth = 1
+EMTLoadingIndicator.progressLineColorOuter = UIColor(white: 1, alpha: 0.28)
+EMTLoadingIndicator.progressLineColorInner = UIColor(white: 1, alpha: 0.70)
+EMTLoadingIndicator.progressLineWidthOuter = 1
+EMTLoadingIndicator.progressLineWidthInner = 2
+EMTLoadingIndicator.reloadColor = UIColor.whiteColor()
+EMTLoadingIndicator.reloadLineWidth = 4
+EMTLoadingIndicator.reloadArrowRatio = 3
 ```
 
 ### Clear Images
@@ -118,6 +124,3 @@ indicator?.clearProgressImage()
 
 ## License
 EMTLoadingIndicator is available under the MIT license. See the LICENSE file for more info.
-
-## Notice
-All images in this readme are fakes created with Photoshop. Not screenshots.
