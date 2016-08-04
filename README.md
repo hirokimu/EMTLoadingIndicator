@@ -38,7 +38,7 @@ Style argument decides the visual of wait (loop) indicator - Dot or Line.
 
 ```swift
 indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!, 
-    width: 40, height: 40, style: .Dot);
+    width: 40, height: 40, style: .Dot)
 
 // prepareImageForWait will be called automatically in the showWait method at the first time.
 // It takes a bit of time. You can call it manually if necessary.
@@ -60,7 +60,7 @@ indicator?.hide()
 
 ```swift
 indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!, 
-    width: 40, height: 40, style: .Line);
+    width: 40, height: 40, style: .Line)
 indicator?.showWait()
 indicator?.hide()
 ```

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "EMTLoadingIndicator"
-  s.version      = "1.0.5"
-  s.summary      = "Displays loading indicator on Apple watchOS 2"
+  s.version      = "1.0.6"
+  s.summary      = "Displays loading indicator on Apple watchOS 2+"
   s.description  = <<-DESC
                    It has default-look waiting indicator, circular indicator, and progress indicator. Makes animated images for WKInterfaceImage dynamically.
                    DESC
@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/hirokimu/EMTLoadingIndicator.git", :tag => s.version }
   s.watchos.source_files = "EMTLoadingIndicator/Classes/*.swift"
   s.watchos.resources = "EMTLoadingIndicator/Resources/*.png"
-  s.frameworks = "WatchKit", "UIKit", "CoreGraphics"
+  s.frameworks = "WatchKit", "UIKit"
   s.requires_arc = true
 end
