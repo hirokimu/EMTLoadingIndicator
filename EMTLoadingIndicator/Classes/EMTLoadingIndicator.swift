@@ -72,7 +72,6 @@ final public class EMTLoadingIndicator: NSObject {
     
     private func prepareImagesForWaitStyleLine() {
         if EMTLoadingIndicator.lineWaitImage == nil {
-            
             UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
             let context = UIGraphicsGetCurrentContext()!
             
@@ -100,7 +99,7 @@ final public class EMTLoadingIndicator: NSObject {
                 let currentFrameImage = UIGraphicsGetImageFromCurrentImageContext()
                 CGContextClearRect(context, rect)
                 
-                return currentFrameImage
+                return currentFrameImage!
             }
             UIGraphicsEndImageContext()
             
@@ -110,7 +109,6 @@ final public class EMTLoadingIndicator: NSObject {
     
     public func prepareImagesForProgress() {
         if EMTLoadingIndicator.progressImages.count == 0 {
-
             UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
             let context:CGContextRef = UIGraphicsGetCurrentContext()!
 
@@ -149,7 +147,7 @@ final public class EMTLoadingIndicator: NSObject {
                 let currentFrameImage = UIGraphicsGetImageFromCurrentImageContext()
                 CGContextClearRect(context, rect)
                 
-                return currentFrameImage
+                return currentFrameImage!
             }
             UIGraphicsEndImageContext()
             
@@ -159,7 +157,6 @@ final public class EMTLoadingIndicator: NSObject {
     
     public func prepareImagesForReload() {
         if EMTLoadingIndicator.reloadImage == nil {
-            
             UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
             let context:CGContextRef = UIGraphicsGetCurrentContext()!
 
@@ -199,7 +196,7 @@ final public class EMTLoadingIndicator: NSObject {
         image?.setImage(style == .Dot ? EMTLoadingIndicator.dotWaitImage : EMTLoadingIndicator.lineWaitImage)
         image?.startAnimating()
         
-        if let controller = controller, image = image {
+        if let controller = controller, let image = image {
             controller.animateWithDuration(0.3, animations: {
                 image.setAlpha(1)
             })
@@ -214,7 +211,7 @@ final public class EMTLoadingIndicator: NSObject {
         image?.stopAnimating()
         image?.setImage(EMTLoadingIndicator.reloadImage)
         
-        if let controller = controller, image = image {
+        if let controller = controller, let image = image {
             controller.animateWithDuration(0.3, animations: {
                 image.setAlpha(1)
             })
@@ -233,7 +230,7 @@ final public class EMTLoadingIndicator: NSObject {
         let startFrame = getCurrentFrameIndex(startPercentage)
         setProgressImage(startFrame)
         
-        if let controller = controller, image = image {
+        if let controller = controller, let image = image {
             controller.animateWithDuration(0.3, animations: {
                 image.setAlpha(1)
             })
@@ -299,7 +296,7 @@ final public class EMTLoadingIndicator: NSObject {
     public func hide() {
         image?.stopAnimating()
         
-        if let controller = controller, image = image {
+        if let controller = controller, let image = image {
             controller.animateWithDuration(0.3, animations: {
                 image.setAlpha(0)
             })

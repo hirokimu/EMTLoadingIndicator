@@ -10,7 +10,7 @@ Simply add class and resource files to your project, or use CocoaPods.
 use_frameworks!
 target :'SomeWatchKitApp Extension', :exclusive => true do
 	platform :watchos, '2.0'
-    pod 'EMTLoadingIndicator', '~> 1.0.6'
+    pod 'EMTLoadingIndicator', '~> 1.0.7'
 end
 ```
 
