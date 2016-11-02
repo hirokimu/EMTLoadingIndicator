@@ -7,14 +7,14 @@
 
 import WatchKit
 
-typealias EMTTimerCallback = (NSTimer) -> Void
+typealias EMTTimerCallback = (Timer) -> Void
 
 public final class EMTTimer: NSObject {
     
     private var timer: EMTTimerInternal?
     private var callback: EMTTimerCallback
     
-    init(interval: NSTimeInterval, callback: EMTTimerCallback, userInfo: AnyObject?, repeats: Bool) {
+    init(interval: TimeInterval, callback: @escaping EMTTimerCallback, userInfo: AnyObject?, repeats: Bool) {
         self.callback = callback
         super.init()
         timer = EMTTimerInternal(
@@ -37,28 +37,27 @@ public final class EMTTimer: NSObject {
 
 internal class EMTTimerInternal: NSObject {
 
-    private var timer: NSTimer?
-    private var callback: (NSTimer) -> Void
+    private var timer: Timer?
+    private var callback: (Timer) -> Void
     
-    init(interval: NSTimeInterval, callback: EMTTimerCallback, userInfo: AnyObject?, repeats: Bool) {
+    init(interval: TimeInterval, callback: @escaping EMTTimerCallback, userInfo: AnyObject?, repeats: Bool) {
 
         self.callback = callback
         
         super.init()
         
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(
-                        interval,
-                        target: self,
-                        selector: repeats ? #selector(repeatTimerFired(_:)) : #selector(timerFired(_:)),
-                        userInfo: userInfo,
-                        repeats: repeats)
+        self.timer = Timer.scheduledTimer(timeInterval: interval,
+                                          target: self,
+                                          selector: repeats ? #selector(repeatTimerFired(timer:)) : #selector(timerFired(timer:)),
+                                          userInfo: userInfo,
+                                          repeats: repeats)
     }
 
-    func repeatTimerFired(timer: NSTimer) {
+    func repeatTimerFired(timer: Timer) {
         self.callback(timer)
     }
 
-    func timerFired(timer: NSTimer) {
+    func timerFired(timer: Timer) {
         self.callback(timer)
         timer.invalidate()
     }

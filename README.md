@@ -1,5 +1,5 @@
 #EMTLoadingIndicator
-Displays loading indicator on Apple watchOS 2+
+Displays loading indicator on Apple watchOS 3+
 
 ## Installation
 Simply add class and resource files to your project, or use CocoaPods.
@@ -9,8 +9,8 @@ Simply add class and resource files to your project, or use CocoaPods.
 ```ruby
 use_frameworks!
 target :'SomeWatchKitApp Extension', :exclusive => true do
-	platform :watchos, '2.0'
-    pod 'EMTLoadingIndicator', '~> 1.0.7'
+	platform :watchos, '3.0'
+    pod 'EMTLoadingIndicator', '~> 3.0.0'
 end
 ```
 
@@ -25,20 +25,20 @@ private var indicator: EMTLoadingIndicator?
 override func willActivate() {
 
     indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!, 
-        width: 40, height: 40, style: .Line)
+        width: 40, height: 40, style: .line)
 ```
 
 width and height are the size of WKInterfaceImage passed to 2nd argument. Indicator images will be created with this size.
 Style argument decides the visual of wait (loop) indicator - Dot or Line.
 
 
-### Dot (System-like) Indicator
+### Dot Indicator
 
 ![Image](http://www.emotionale.jp/images/git/loadingindicator/img0.jpg)
 
 ```swift
 indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!, 
-    width: 40, height: 40, style: .Dot)
+    width: 40, height: 40, style: .dot)
 
 // prepareImageForWait will be called automatically in the showWait method at the first time.
 // It takes a bit of time. You can call it manually if necessary.
@@ -60,7 +60,7 @@ indicator?.hide()
 
 ```swift
 indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!, 
-    width: 40, height: 40, style: .Line)
+    width: 40, height: 40, style: .line)
 indicator?.showWait()
 indicator?.hide()
 ```
@@ -103,7 +103,7 @@ EMTLoadingIndicator.progressLineColorOuter = UIColor(white: 1, alpha: 0.28)
 EMTLoadingIndicator.progressLineColorInner = UIColor(white: 1, alpha: 0.70)
 EMTLoadingIndicator.progressLineWidthOuter = 1
 EMTLoadingIndicator.progressLineWidthInner = 2
-EMTLoadingIndicator.reloadColor = UIColor.whiteColor()
+EMTLoadingIndicator.reloadColor = UIColor.white
 EMTLoadingIndicator.reloadLineWidth = 4
 EMTLoadingIndicator.reloadArrowRatio = 3
 ```
@@ -120,7 +120,7 @@ indicator?.clearProgressImage()
 ```
 
 ## Requirements
-- watchOS 2.0+
+- watchOS 3.0+
 
 ## License
 EMTLoadingIndicator is available under the MIT license. See the LICENSE file for more info.
