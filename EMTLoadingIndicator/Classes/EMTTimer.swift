@@ -53,11 +53,11 @@ internal class EMTTimerInternal: NSObject {
                                           repeats: repeats)
     }
 
-    func repeatTimerFired(timer: Timer) {
+    @objc func repeatTimerFired(timer: Timer) {
         self.callback(timer)
     }
 
-    func timerFired(timer: Timer) {
+    @objc func timerFired(timer: Timer) {
         self.callback(timer)
         timer.invalidate()
     }
