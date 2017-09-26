@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "EMTLoadingIndicator"
-  s.version      = "3.0.0"
+  s.version      = "4.0.0"
   s.summary      = "Displays loading indicator on Apple watchOS 3+"
   s.description  = <<-DESC
                    It has dot-style waiting indicator, circular indicator, and progress indicator. Makes animated images for WKInterfaceImage dynamically.

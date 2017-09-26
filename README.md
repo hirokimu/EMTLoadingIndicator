@@ -9,8 +9,8 @@ Simply add class and resource files to your project, or use CocoaPods.
 ```ruby
 use_frameworks!
 target :'SomeWatchKitApp Extension', :exclusive => true do
-	platform :watchos, '3.0'
-    pod 'EMTLoadingIndicator', '~> 3.0.0'
+	platform :watchos, '4.0'
+    pod 'EMTLoadingIndicator', '~> 4.0.0'
 end
 ```
 
@@ -24,7 +24,7 @@ private var indicator: EMTLoadingIndicator?
 
 override func willActivate() {
 
-    indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!, 
+    indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!,
         width: 40, height: 40, style: .line)
 ```
 
@@ -37,7 +37,7 @@ Style argument decides the visual of wait (loop) indicator - Dot or Line.
 ![Image](http://www.emotionale.jp/images/git/loadingindicator/img0.jpg)
 
 ```swift
-indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!, 
+indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!,
     width: 40, height: 40, style: .dot)
 
 // prepareImageForWait will be called automatically in the showWait method at the first time.
@@ -59,7 +59,7 @@ indicator?.hide()
 ![Image](http://www.emotionale.jp/images/git/loadingindicator/img1.jpg)
 
 ```swift
-indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!, 
+indicator = EMTLoadingIndicator(interfaceController: self, interfaceImage: image!,
     width: 40, height: 40, style: .line)
 indicator?.showWait()
 indicator?.hide()

@@ -82,8 +82,8 @@ final public class EMTLoadingIndicator: NSObject {
             let images: [UIImage] = (0...60).map {
 
                 let degree = CGFloat(-90 + 6 * $0)
-                let startDegree = CGFloat(M_PI / 180) * degree
-                let endDegree = startDegree + CGFloat(M_PI * 2 * 0.9)
+                let startDegree = CGFloat.pi / 180 * degree
+                let endDegree = startDegree + CGFloat.pi * 2 * 0.9
                 
                 let path:UIBezierPath = UIBezierPath(arcCenter: center,
                                                      radius: radius,
@@ -122,7 +122,7 @@ final public class EMTLoadingIndicator: NSObject {
                 let path = UIBezierPath(arcCenter: center,
                     radius: radius,
                     startAngle: 0,
-                    endAngle: CGFloat(M_PI * 2),
+                    endAngle: CGFloat.pi * 2,
                     clockwise: true)
                 
                 path.lineWidth = EMTLoadingIndicator.progressLineWidthOuter
@@ -131,8 +131,8 @@ final public class EMTLoadingIndicator: NSObject {
                 path.stroke()
 
                 let degree = 6 * CGFloat($0)
-                let startDegree = CGFloat(-M_PI / 2)
-                let endDegree = startDegree + CGFloat(M_PI / 180) * degree
+                let startDegree = -CGFloat.pi / 2
+                let endDegree = startDegree + CGFloat.pi / 180 * degree
                 
                 let progressPath:UIBezierPath = UIBezierPath(arcCenter: center,
                                                              radius: progressRadius,
@@ -164,7 +164,7 @@ final public class EMTLoadingIndicator: NSObject {
             let center = CGPoint(x: imageSize.width / 2, y: imageSize.height / 2)
             let radius = imageSize.width / 2 - triangleSideLength / 2
             let startDegree: CGFloat = 0
-            let endDegree = startDegree + CGFloat(M_PI * 1.5)
+            let endDegree = startDegree + CGFloat.pi * 1.5
             
             let path:UIBezierPath = UIBezierPath(arcCenter: center,
                                                  radius: radius,
