@@ -1,6 +1,12 @@
 # EMTLoadingIndicator
 Displays loading indicator on Apple watchOS 3+
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat
+            )](http://mit-license.org) [![Platform](https://img.shields.io/badge/platform-watchOS-lightgrey.svg?style=flat
+             )](https://developer.apple.com/resources/) [![Language](https://img.shields.io/badge/language-swift-orange.svg?style=flat
+             )](https://developer.apple.com/swift) [![Cocoapod](https://img.shields.io/cocoapods/v/EMTLoadingIndicator.svg?style=flat)](http://cocoadocs.org/docsets/EMTLoadingIndicator/)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 ## Installation
 Simply add class and resource files to your project, or use CocoaPods or Carthage.
 
