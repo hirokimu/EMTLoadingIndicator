@@ -1,8 +1,8 @@
-#EMTLoadingIndicator
+# EMTLoadingIndicator
 Displays loading indicator on Apple watchOS 3+
 
 ## Installation
-Simply add class and resource files to your project, or use CocoaPods.
+Simply add class and resource files to your project, or use CocoaPods or Carthage.
 
 ### Podfile
 
