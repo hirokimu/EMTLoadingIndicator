@@ -1,5 +1,5 @@
 # EMTLoadingIndicator
-Displays loading indicator on Apple watchOS 3+
+Displays loading indicator on Apple watchOS 4+
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat
             )](http://mit-license.org) [![Platform](https://img.shields.io/badge/platform-watchOS-lightgrey.svg?style=flat
@@ -18,6 +18,12 @@ target :'SomeWatchKitApp Extension', :exclusive => true do
 	platform :watchos, '4.0'
     pod 'EMTLoadingIndicator', '~> 4.0.0'
 end
+```
+
+### Carthage
+
+```
+carthage update --platform watchOS
 ```
 
 ## Usage
