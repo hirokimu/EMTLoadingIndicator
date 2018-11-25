@@ -37,8 +37,7 @@
 		7ACA611C21AA549400212448 /* waitIndicatorGraphic-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C95213271B3000072B4 /* waitIndicatorGraphic-2@2x.png */; };
 		7ACA611D21AA549400212448 /* waitIndicatorGraphic-16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C96213271B3000072B4 /* waitIndicatorGraphic-16@2x.png */; };
 		7ACA611E21AA549400212448 /* waitIndicatorGraphic-20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C97213271B3000072B4 /* waitIndicatorGraphic-20@2x.png */; };
-		7ACA611F21AA549800212448 /* EMTLoadingIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D454C6D213270D2000072B4 /* EMTLoadingIndicator.h */; };
-		7ACA612121AA54F400212448 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ACA60FA21AA546700212448 /* Info.plist */; };
+		7ACA611F21AA549800212448 /* EMTLoadingIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D454C6D213270D2000072B4 /* EMTLoadingIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7ACA612521AA56C700212448 /* EMTLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA612321AA56C700212448 /* EMTLoadingIndicator.swift */; };
 		7ACA612621AA56C700212448 /* EMTTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA612421AA56C700212448 /* EMTTimer.swift */; };
 /* End PBXBuildFile section */
@@ -249,7 +248,6 @@
 				7ACA610121AA549400212448 /* waitIndicatorGraphic-13@2x.png in Resources */,
 				7ACA611E21AA549400212448 /* waitIndicatorGraphic-20@2x.png in Resources */,
 				7ACA611C21AA549400212448 /* waitIndicatorGraphic-2@2x.png in Resources */,
-				7ACA612121AA54F400212448 /* Info.plist in Resources */,
 				7ACA610321AA549400212448 /* waitIndicatorGraphic-29@2x.png in Resources */,
 				7ACA610F21AA549400212448 /* waitIndicatorGraphic-3@2x.png in Resources */,
 				7ACA611921AA549400212448 /* waitIndicatorGraphic-14@2x.png in Resources */,
