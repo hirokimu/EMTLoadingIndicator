@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7ACA60FB21AA546700212448 /* EMTLoadingIndicatorWatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACA60F921AA546700212448 /* EMTLoadingIndicatorWatchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7ACA610121AA549400212448 /* waitIndicatorGraphic-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7A213271B3000072B4 /* waitIndicatorGraphic-13@2x.png */; };
 		7ACA610221AA549400212448 /* waitIndicatorGraphic-25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7B213271B3000072B4 /* waitIndicatorGraphic-25@2x.png */; };
 		7ACA610321AA549400212448 /* waitIndicatorGraphic-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7C213271B3000072B4 /* waitIndicatorGraphic-29@2x.png */; };
@@ -77,7 +76,6 @@
 		0D454C96213271B3000072B4 /* waitIndicatorGraphic-16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waitIndicatorGraphic-16@2x.png"; sourceTree = "<group>"; };
 		0D454C97213271B3000072B4 /* waitIndicatorGraphic-20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waitIndicatorGraphic-20@2x.png"; sourceTree = "<group>"; };
 		7ACA60F721AA546700212448 /* EMTLoadingIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EMTLoadingIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7ACA60F921AA546700212448 /* EMTLoadingIndicatorWatchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMTLoadingIndicatorWatchOS.h; sourceTree = "<group>"; };
 		7ACA60FA21AA546700212448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ACA612321AA56C700212448 /* EMTLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTLoadingIndicator.swift; sourceTree = "<group>"; };
 		7ACA612421AA56C700212448 /* EMTTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTTimer.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 				7ACA612221AA56C700212448 /* Classes */,
 				0D454C79213271B3000072B4 /* Resources */,
 				0D454C6D213270D2000072B4 /* EMTLoadingIndicator.h */,
-				7ACA60F921AA546700212448 /* EMTLoadingIndicatorWatchOS.h */,
 				7ACA60FA21AA546700212448 /* Info.plist */,
 			);
 			path = EMTLoadingIndicator;
@@ -176,7 +173,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ACA611F21AA549800212448 /* EMTLoadingIndicator.h in Headers */,
-				7ACA60FB21AA546700212448 /* EMTLoadingIndicatorWatchOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
