@@ -7,47 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D454C6F213270D2000072B4 /* EMTLoadingIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D454C6D213270D2000072B4 /* EMTLoadingIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D454C772132719B000072B4 /* EMTTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D454C752132719B000072B4 /* EMTTimer.swift */; };
-		0D454C782132719B000072B4 /* EMTLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D454C762132719B000072B4 /* EMTLoadingIndicator.swift */; };
-		0D454C98213271B3000072B4 /* waitIndicatorGraphic-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7A213271B3000072B4 /* waitIndicatorGraphic-13@2x.png */; };
-		0D454C99213271B3000072B4 /* waitIndicatorGraphic-25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7B213271B3000072B4 /* waitIndicatorGraphic-25@2x.png */; };
-		0D454C9A213271B3000072B4 /* waitIndicatorGraphic-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7C213271B3000072B4 /* waitIndicatorGraphic-29@2x.png */; };
-		0D454C9B213271B3000072B4 /* waitIndicatorGraphic-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7D213271B3000072B4 /* waitIndicatorGraphic-7@2x.png */; };
-		0D454C9C213271B3000072B4 /* waitIndicatorGraphic-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7E213271B3000072B4 /* waitIndicatorGraphic-9@2x.png */; };
-		0D454C9D213271B3000072B4 /* waitIndicatorGraphic-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7F213271B3000072B4 /* waitIndicatorGraphic-5@2x.png */; };
-		0D454C9E213271B3000072B4 /* waitIndicatorGraphic-11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C80213271B3000072B4 /* waitIndicatorGraphic-11@2x.png */; };
-		0D454C9F213271B3000072B4 /* waitIndicatorGraphic-27@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C81213271B3000072B4 /* waitIndicatorGraphic-27@2x.png */; };
-		0D454CA0213271B3000072B4 /* waitIndicatorGraphic-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C82213271B3000072B4 /* waitIndicatorGraphic-1@2x.png */; };
-		0D454CA1213271B3000072B4 /* waitIndicatorGraphic-23@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C83213271B3000072B4 /* waitIndicatorGraphic-23@2x.png */; };
-		0D454CA2213271B3000072B4 /* waitIndicatorGraphic-19@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C84213271B3000072B4 /* waitIndicatorGraphic-19@2x.png */; };
-		0D454CA3213271B3000072B4 /* waitIndicatorGraphic-15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C85213271B3000072B4 /* waitIndicatorGraphic-15@2x.png */; };
-		0D454CA4213271B3000072B4 /* waitIndicatorGraphic-21@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C86213271B3000072B4 /* waitIndicatorGraphic-21@2x.png */; };
-		0D454CA5213271B3000072B4 /* waitIndicatorGraphic-17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C87213271B3000072B4 /* waitIndicatorGraphic-17@2x.png */; };
-		0D454CA6213271B3000072B4 /* waitIndicatorGraphic-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C88213271B3000072B4 /* waitIndicatorGraphic-3@2x.png */; };
-		0D454CA7213271B3000072B4 /* waitIndicatorGraphic-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C89213271B3000072B4 /* waitIndicatorGraphic-6@2x.png */; };
-		0D454CA8213271B3000072B4 /* waitIndicatorGraphic-24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8A213271B3000072B4 /* waitIndicatorGraphic-24@2x.png */; };
-		0D454CA9213271B3000072B4 /* waitIndicatorGraphic-28@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8B213271B3000072B4 /* waitIndicatorGraphic-28@2x.png */; };
-		0D454CAA213271B3000072B4 /* waitIndicatorGraphic-12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8C213271B3000072B4 /* waitIndicatorGraphic-12@2x.png */; };
-		0D454CAB213271B3000072B4 /* waitIndicatorGraphic-26@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8D213271B3000072B4 /* waitIndicatorGraphic-26@2x.png */; };
-		0D454CAC213271B3000072B4 /* waitIndicatorGraphic-10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8E213271B3000072B4 /* waitIndicatorGraphic-10@2x.png */; };
-		0D454CAD213271B3000072B4 /* waitIndicatorGraphic-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8F213271B3000072B4 /* waitIndicatorGraphic-8@2x.png */; };
-		0D454CAE213271B3000072B4 /* waitIndicatorGraphic-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C90213271B3000072B4 /* waitIndicatorGraphic-4@2x.png */; };
-		0D454CAF213271B3000072B4 /* waitIndicatorGraphic-18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C91213271B3000072B4 /* waitIndicatorGraphic-18@2x.png */; };
-		0D454CB0213271B3000072B4 /* waitIndicatorGraphic-14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C92213271B3000072B4 /* waitIndicatorGraphic-14@2x.png */; };
-		0D454CB1213271B3000072B4 /* waitIndicatorGraphic-22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C93213271B3000072B4 /* waitIndicatorGraphic-22@2x.png */; };
-		0D454CB2213271B3000072B4 /* waitIndicatorGraphic-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C94213271B3000072B4 /* waitIndicatorGraphic-0@2x.png */; };
-		0D454CB3213271B3000072B4 /* waitIndicatorGraphic-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C95213271B3000072B4 /* waitIndicatorGraphic-2@2x.png */; };
-		0D454CB4213271B3000072B4 /* waitIndicatorGraphic-16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C96213271B3000072B4 /* waitIndicatorGraphic-16@2x.png */; };
-		0D454CB5213271B3000072B4 /* waitIndicatorGraphic-20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C97213271B3000072B4 /* waitIndicatorGraphic-20@2x.png */; };
+		7ACA60FB21AA546700212448 /* EMTLoadingIndicatorWatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ACA60F921AA546700212448 /* EMTLoadingIndicatorWatchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7ACA610121AA549400212448 /* waitIndicatorGraphic-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7A213271B3000072B4 /* waitIndicatorGraphic-13@2x.png */; };
+		7ACA610221AA549400212448 /* waitIndicatorGraphic-25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7B213271B3000072B4 /* waitIndicatorGraphic-25@2x.png */; };
+		7ACA610321AA549400212448 /* waitIndicatorGraphic-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7C213271B3000072B4 /* waitIndicatorGraphic-29@2x.png */; };
+		7ACA610421AA549400212448 /* waitIndicatorGraphic-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7D213271B3000072B4 /* waitIndicatorGraphic-7@2x.png */; };
+		7ACA610521AA549400212448 /* waitIndicatorGraphic-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7E213271B3000072B4 /* waitIndicatorGraphic-9@2x.png */; };
+		7ACA610621AA549400212448 /* waitIndicatorGraphic-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C7F213271B3000072B4 /* waitIndicatorGraphic-5@2x.png */; };
+		7ACA610721AA549400212448 /* waitIndicatorGraphic-11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C80213271B3000072B4 /* waitIndicatorGraphic-11@2x.png */; };
+		7ACA610821AA549400212448 /* waitIndicatorGraphic-27@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C81213271B3000072B4 /* waitIndicatorGraphic-27@2x.png */; };
+		7ACA610921AA549400212448 /* waitIndicatorGraphic-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C82213271B3000072B4 /* waitIndicatorGraphic-1@2x.png */; };
+		7ACA610A21AA549400212448 /* waitIndicatorGraphic-23@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C83213271B3000072B4 /* waitIndicatorGraphic-23@2x.png */; };
+		7ACA610B21AA549400212448 /* waitIndicatorGraphic-19@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C84213271B3000072B4 /* waitIndicatorGraphic-19@2x.png */; };
+		7ACA610C21AA549400212448 /* waitIndicatorGraphic-15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C85213271B3000072B4 /* waitIndicatorGraphic-15@2x.png */; };
+		7ACA610D21AA549400212448 /* waitIndicatorGraphic-21@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C86213271B3000072B4 /* waitIndicatorGraphic-21@2x.png */; };
+		7ACA610E21AA549400212448 /* waitIndicatorGraphic-17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C87213271B3000072B4 /* waitIndicatorGraphic-17@2x.png */; };
+		7ACA610F21AA549400212448 /* waitIndicatorGraphic-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C88213271B3000072B4 /* waitIndicatorGraphic-3@2x.png */; };
+		7ACA611021AA549400212448 /* waitIndicatorGraphic-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C89213271B3000072B4 /* waitIndicatorGraphic-6@2x.png */; };
+		7ACA611121AA549400212448 /* waitIndicatorGraphic-24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8A213271B3000072B4 /* waitIndicatorGraphic-24@2x.png */; };
+		7ACA611221AA549400212448 /* waitIndicatorGraphic-28@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8B213271B3000072B4 /* waitIndicatorGraphic-28@2x.png */; };
+		7ACA611321AA549400212448 /* waitIndicatorGraphic-12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8C213271B3000072B4 /* waitIndicatorGraphic-12@2x.png */; };
+		7ACA611421AA549400212448 /* waitIndicatorGraphic-26@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8D213271B3000072B4 /* waitIndicatorGraphic-26@2x.png */; };
+		7ACA611521AA549400212448 /* waitIndicatorGraphic-10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8E213271B3000072B4 /* waitIndicatorGraphic-10@2x.png */; };
+		7ACA611621AA549400212448 /* waitIndicatorGraphic-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C8F213271B3000072B4 /* waitIndicatorGraphic-8@2x.png */; };
+		7ACA611721AA549400212448 /* waitIndicatorGraphic-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C90213271B3000072B4 /* waitIndicatorGraphic-4@2x.png */; };
+		7ACA611821AA549400212448 /* waitIndicatorGraphic-18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C91213271B3000072B4 /* waitIndicatorGraphic-18@2x.png */; };
+		7ACA611921AA549400212448 /* waitIndicatorGraphic-14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C92213271B3000072B4 /* waitIndicatorGraphic-14@2x.png */; };
+		7ACA611A21AA549400212448 /* waitIndicatorGraphic-22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C93213271B3000072B4 /* waitIndicatorGraphic-22@2x.png */; };
+		7ACA611B21AA549400212448 /* waitIndicatorGraphic-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C94213271B3000072B4 /* waitIndicatorGraphic-0@2x.png */; };
+		7ACA611C21AA549400212448 /* waitIndicatorGraphic-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C95213271B3000072B4 /* waitIndicatorGraphic-2@2x.png */; };
+		7ACA611D21AA549400212448 /* waitIndicatorGraphic-16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C96213271B3000072B4 /* waitIndicatorGraphic-16@2x.png */; };
+		7ACA611E21AA549400212448 /* waitIndicatorGraphic-20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D454C97213271B3000072B4 /* waitIndicatorGraphic-20@2x.png */; };
+		7ACA611F21AA549800212448 /* EMTLoadingIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D454C6D213270D2000072B4 /* EMTLoadingIndicator.h */; };
+		7ACA612121AA54F400212448 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ACA60FA21AA546700212448 /* Info.plist */; };
+		7ACA612521AA56C700212448 /* EMTLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA612321AA56C700212448 /* EMTLoadingIndicator.swift */; };
+		7ACA612621AA56C700212448 /* EMTTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA612421AA56C700212448 /* EMTTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D454C6A213270D2000072B4 /* EMTLoadingIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EMTLoadingIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D454C6D213270D2000072B4 /* EMTLoadingIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMTLoadingIndicator.h; sourceTree = "<group>"; };
-		0D454C6E213270D2000072B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D454C752132719B000072B4 /* EMTTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EMTTimer.swift; path = Classes/EMTTimer.swift; sourceTree = "<group>"; };
-		0D454C762132719B000072B4 /* EMTLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EMTLoadingIndicator.swift; path = Classes/EMTLoadingIndicator.swift; sourceTree = "<group>"; };
 		0D454C7A213271B3000072B4 /* waitIndicatorGraphic-13@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waitIndicatorGraphic-13@2x.png"; sourceTree = "<group>"; };
 		0D454C7B213271B3000072B4 /* waitIndicatorGraphic-25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waitIndicatorGraphic-25@2x.png"; sourceTree = "<group>"; };
 		0D454C7C213271B3000072B4 /* waitIndicatorGraphic-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waitIndicatorGraphic-29@2x.png"; sourceTree = "<group>"; };
@@ -78,10 +76,15 @@
 		0D454C95213271B3000072B4 /* waitIndicatorGraphic-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waitIndicatorGraphic-2@2x.png"; sourceTree = "<group>"; };
 		0D454C96213271B3000072B4 /* waitIndicatorGraphic-16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waitIndicatorGraphic-16@2x.png"; sourceTree = "<group>"; };
 		0D454C97213271B3000072B4 /* waitIndicatorGraphic-20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "waitIndicatorGraphic-20@2x.png"; sourceTree = "<group>"; };
+		7ACA60F721AA546700212448 /* EMTLoadingIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EMTLoadingIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ACA60F921AA546700212448 /* EMTLoadingIndicatorWatchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMTLoadingIndicatorWatchOS.h; sourceTree = "<group>"; };
+		7ACA60FA21AA546700212448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ACA612321AA56C700212448 /* EMTLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTLoadingIndicator.swift; sourceTree = "<group>"; };
+		7ACA612421AA56C700212448 /* EMTTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMTTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0D454C66213270D2000072B4 /* Frameworks */ = {
+		7ACA60F421AA546700212448 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -94,7 +97,7 @@
 		0D454C60213270D2000072B4 = {
 			isa = PBXGroup;
 			children = (
-				0D454C6C213270D2000072B4 /* EMTLoadingIndicator */,
+				7ACA60F821AA546700212448 /* EMTLoadingIndicator */,
 				0D454C6B213270D2000072B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,21 +105,9 @@
 		0D454C6B213270D2000072B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0D454C6A213270D2000072B4 /* EMTLoadingIndicator.framework */,
+				7ACA60F721AA546700212448 /* EMTLoadingIndicator.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0D454C6C213270D2000072B4 /* EMTLoadingIndicator */ = {
-			isa = PBXGroup;
-			children = (
-				0D454C762132719B000072B4 /* EMTLoadingIndicator.swift */,
-				0D454C752132719B000072B4 /* EMTTimer.swift */,
-				0D454C79213271B3000072B4 /* Resources */,
-				0D454C6D213270D2000072B4 /* EMTLoadingIndicator.h */,
-				0D454C6E213270D2000072B4 /* Info.plist */,
-			);
-			path = EMTLoadingIndicator;
 			sourceTree = "<group>";
 		};
 		0D454C79213271B3000072B4 /* Resources */ = {
@@ -156,36 +147,58 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		7ACA60F821AA546700212448 /* EMTLoadingIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				7ACA612221AA56C700212448 /* Classes */,
+				0D454C79213271B3000072B4 /* Resources */,
+				0D454C6D213270D2000072B4 /* EMTLoadingIndicator.h */,
+				7ACA60F921AA546700212448 /* EMTLoadingIndicatorWatchOS.h */,
+				7ACA60FA21AA546700212448 /* Info.plist */,
+			);
+			path = EMTLoadingIndicator;
+			sourceTree = "<group>";
+		};
+		7ACA612221AA56C700212448 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7ACA612321AA56C700212448 /* EMTLoadingIndicator.swift */,
+				7ACA612421AA56C700212448 /* EMTTimer.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0D454C67213270D2000072B4 /* Headers */ = {
+		7ACA60F221AA546700212448 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D454C6F213270D2000072B4 /* EMTLoadingIndicator.h in Headers */,
+				7ACA611F21AA549800212448 /* EMTLoadingIndicator.h in Headers */,
+				7ACA60FB21AA546700212448 /* EMTLoadingIndicatorWatchOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0D454C69213270D2000072B4 /* EMTLoadingIndicator */ = {
+		7ACA60F621AA546700212448 /* EMTLoadingIndicator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D454C72213270D2000072B4 /* Build configuration list for PBXNativeTarget "EMTLoadingIndicator" */;
+			buildConfigurationList = 7ACA60FC21AA546700212448 /* Build configuration list for PBXNativeTarget "EMTLoadingIndicator" */;
 			buildPhases = (
-				0D454C65213270D2000072B4 /* Sources */,
-				0D454C66213270D2000072B4 /* Frameworks */,
-				0D454C67213270D2000072B4 /* Headers */,
-				0D454C68213270D2000072B4 /* Resources */,
+				7ACA60F221AA546700212448 /* Headers */,
+				7ACA60F321AA546700212448 /* Sources */,
+				7ACA60F421AA546700212448 /* Frameworks */,
+				7ACA60F521AA546700212448 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = EMTLoadingIndicator;
-			productName = EMTLoadingIndicator;
-			productReference = 0D454C6A213270D2000072B4 /* EMTLoadingIndicator.framework */;
+			productName = EMTLoadingIndicatorWatchOS;
+			productReference = 7ACA60F721AA546700212448 /* EMTLoadingIndicator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -197,9 +210,8 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Meeco Labs";
 				TargetAttributes = {
-					0D454C69213270D2000072B4 = {
-						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+					7ACA60F621AA546700212448 = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
@@ -215,58 +227,59 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0D454C69213270D2000072B4 /* EMTLoadingIndicator */,
+				7ACA60F621AA546700212448 /* EMTLoadingIndicator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0D454C68213270D2000072B4 /* Resources */ = {
+		7ACA60F521AA546700212448 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D454CAB213271B3000072B4 /* waitIndicatorGraphic-26@2x.png in Resources */,
-				0D454CAD213271B3000072B4 /* waitIndicatorGraphic-8@2x.png in Resources */,
-				0D454C9D213271B3000072B4 /* waitIndicatorGraphic-5@2x.png in Resources */,
-				0D454CA4213271B3000072B4 /* waitIndicatorGraphic-21@2x.png in Resources */,
-				0D454CB2213271B3000072B4 /* waitIndicatorGraphic-0@2x.png in Resources */,
-				0D454CA0213271B3000072B4 /* waitIndicatorGraphic-1@2x.png in Resources */,
-				0D454CA8213271B3000072B4 /* waitIndicatorGraphic-24@2x.png in Resources */,
-				0D454CB4213271B3000072B4 /* waitIndicatorGraphic-16@2x.png in Resources */,
-				0D454CB1213271B3000072B4 /* waitIndicatorGraphic-22@2x.png in Resources */,
-				0D454CA9213271B3000072B4 /* waitIndicatorGraphic-28@2x.png in Resources */,
-				0D454CA3213271B3000072B4 /* waitIndicatorGraphic-15@2x.png in Resources */,
-				0D454C9F213271B3000072B4 /* waitIndicatorGraphic-27@2x.png in Resources */,
-				0D454CAF213271B3000072B4 /* waitIndicatorGraphic-18@2x.png in Resources */,
-				0D454C98213271B3000072B4 /* waitIndicatorGraphic-13@2x.png in Resources */,
-				0D454CB5213271B3000072B4 /* waitIndicatorGraphic-20@2x.png in Resources */,
-				0D454CB3213271B3000072B4 /* waitIndicatorGraphic-2@2x.png in Resources */,
-				0D454C9A213271B3000072B4 /* waitIndicatorGraphic-29@2x.png in Resources */,
-				0D454CA6213271B3000072B4 /* waitIndicatorGraphic-3@2x.png in Resources */,
-				0D454CB0213271B3000072B4 /* waitIndicatorGraphic-14@2x.png in Resources */,
-				0D454CAC213271B3000072B4 /* waitIndicatorGraphic-10@2x.png in Resources */,
-				0D454CAE213271B3000072B4 /* waitIndicatorGraphic-4@2x.png in Resources */,
-				0D454CA1213271B3000072B4 /* waitIndicatorGraphic-23@2x.png in Resources */,
-				0D454C9C213271B3000072B4 /* waitIndicatorGraphic-9@2x.png in Resources */,
-				0D454C9B213271B3000072B4 /* waitIndicatorGraphic-7@2x.png in Resources */,
-				0D454CA5213271B3000072B4 /* waitIndicatorGraphic-17@2x.png in Resources */,
-				0D454CAA213271B3000072B4 /* waitIndicatorGraphic-12@2x.png in Resources */,
-				0D454C99213271B3000072B4 /* waitIndicatorGraphic-25@2x.png in Resources */,
-				0D454CA7213271B3000072B4 /* waitIndicatorGraphic-6@2x.png in Resources */,
-				0D454CA2213271B3000072B4 /* waitIndicatorGraphic-19@2x.png in Resources */,
-				0D454C9E213271B3000072B4 /* waitIndicatorGraphic-11@2x.png in Resources */,
+				7ACA611421AA549400212448 /* waitIndicatorGraphic-26@2x.png in Resources */,
+				7ACA611621AA549400212448 /* waitIndicatorGraphic-8@2x.png in Resources */,
+				7ACA610621AA549400212448 /* waitIndicatorGraphic-5@2x.png in Resources */,
+				7ACA610D21AA549400212448 /* waitIndicatorGraphic-21@2x.png in Resources */,
+				7ACA611B21AA549400212448 /* waitIndicatorGraphic-0@2x.png in Resources */,
+				7ACA610921AA549400212448 /* waitIndicatorGraphic-1@2x.png in Resources */,
+				7ACA611121AA549400212448 /* waitIndicatorGraphic-24@2x.png in Resources */,
+				7ACA611D21AA549400212448 /* waitIndicatorGraphic-16@2x.png in Resources */,
+				7ACA611A21AA549400212448 /* waitIndicatorGraphic-22@2x.png in Resources */,
+				7ACA611221AA549400212448 /* waitIndicatorGraphic-28@2x.png in Resources */,
+				7ACA610C21AA549400212448 /* waitIndicatorGraphic-15@2x.png in Resources */,
+				7ACA610821AA549400212448 /* waitIndicatorGraphic-27@2x.png in Resources */,
+				7ACA611821AA549400212448 /* waitIndicatorGraphic-18@2x.png in Resources */,
+				7ACA610121AA549400212448 /* waitIndicatorGraphic-13@2x.png in Resources */,
+				7ACA611E21AA549400212448 /* waitIndicatorGraphic-20@2x.png in Resources */,
+				7ACA611C21AA549400212448 /* waitIndicatorGraphic-2@2x.png in Resources */,
+				7ACA612121AA54F400212448 /* Info.plist in Resources */,
+				7ACA610321AA549400212448 /* waitIndicatorGraphic-29@2x.png in Resources */,
+				7ACA610F21AA549400212448 /* waitIndicatorGraphic-3@2x.png in Resources */,
+				7ACA611921AA549400212448 /* waitIndicatorGraphic-14@2x.png in Resources */,
+				7ACA611521AA549400212448 /* waitIndicatorGraphic-10@2x.png in Resources */,
+				7ACA611721AA549400212448 /* waitIndicatorGraphic-4@2x.png in Resources */,
+				7ACA610A21AA549400212448 /* waitIndicatorGraphic-23@2x.png in Resources */,
+				7ACA610521AA549400212448 /* waitIndicatorGraphic-9@2x.png in Resources */,
+				7ACA610421AA549400212448 /* waitIndicatorGraphic-7@2x.png in Resources */,
+				7ACA610E21AA549400212448 /* waitIndicatorGraphic-17@2x.png in Resources */,
+				7ACA611321AA549400212448 /* waitIndicatorGraphic-12@2x.png in Resources */,
+				7ACA610221AA549400212448 /* waitIndicatorGraphic-25@2x.png in Resources */,
+				7ACA611021AA549400212448 /* waitIndicatorGraphic-6@2x.png in Resources */,
+				7ACA610B21AA549400212448 /* waitIndicatorGraphic-19@2x.png in Resources */,
+				7ACA610721AA549400212448 /* waitIndicatorGraphic-11@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0D454C65213270D2000072B4 /* Sources */ = {
+		7ACA60F321AA546700212448 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D454C772132719B000072B4 /* EMTTimer.swift in Sources */,
-				0D454C782132719B000072B4 /* EMTLoadingIndicator.swift in Sources */,
+				7ACA612621AA56C700212448 /* EMTTimer.swift in Sources */,
+				7ACA612521AA56C700212448 /* EMTLoadingIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,11 +404,10 @@
 			};
 			name = Release;
 		};
-		0D454C73213270D2000072B4 /* Debug */ = {
+		7ACA60FD21AA546700212448 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -410,20 +422,21 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.emotionale.EMTLoadingIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
-		0D454C74213270D2000072B4 /* Release */ = {
+		7ACA60FE21AA546700212448 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -438,11 +451,13 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.emotionale.EMTLoadingIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -458,11 +473,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D454C72213270D2000072B4 /* Build configuration list for PBXNativeTarget "EMTLoadingIndicator" */ = {
+		7ACA60FC21AA546700212448 /* Build configuration list for PBXNativeTarget "EMTLoadingIndicator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D454C73213270D2000072B4 /* Debug */,
-				0D454C74213270D2000072B4 /* Release */,
+				7ACA60FD21AA546700212448 /* Debug */,
+				7ACA60FE21AA546700212448 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
