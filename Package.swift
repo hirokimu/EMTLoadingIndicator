@@ -16,6 +16,11 @@ let package = Package(
         .target(
             name: "EMTLoadingIndicator",
             path: ".",
+            exclude: ["LICENSE",
+                      "README.md",
+                      "waitIndicatorGraphic.fla",
+                      "EMTLoadingIndicator/Info.plist",
+                      "EMTLoadingIndicator.podspec"],
             sources: ["EMTLoadingIndicator/Classes"],
             resources: [.process("EMTLoadingIndicator/Resources")])
     ]
