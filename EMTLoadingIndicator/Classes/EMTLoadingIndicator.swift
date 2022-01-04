@@ -6,7 +6,9 @@
 //
 
 import UIKit
+#if !os(iOS)
 import WatchKit
+#endif
 
 @objc
 final public class EMTLoadingIndicator: NSObject {
@@ -61,7 +63,11 @@ final public class EMTLoadingIndicator: NSObject {
     
     private func prepareImagesForWaitStyleDot() {
         if EMTLoadingIndicator.dotWaitImage == nil {
+            #if SWIFT_PACKAGE
+            let bundle = Bundle.module
+            #else
             let bundle = Bundle(for: EMTLoadingIndicator.self)
+            #endif
             let cursors: [UIImage] = (0...29).map {
                 let index = $0
                 return UIImage(contentsOfFile: (bundle.path(forResource: "waitIndicatorGraphic-\(index)@2x", ofType: "png"))!)!
