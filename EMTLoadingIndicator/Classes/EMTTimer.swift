@@ -5,7 +5,9 @@
 //  Copyright (C) 2016 emotionale. All rights reserved.
 //
 
+#if !os(iOS)
 import WatchKit
+#endif
 
 typealias EMTTimerCallback = (Timer) -> Void
 
